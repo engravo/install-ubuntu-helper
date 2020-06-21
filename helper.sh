@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# echo -n "Type something and press enter: "
-# read
-# echo You typed ${REPLY}
-
 cd ~
 mkdir .ssh projects
 chmod 700 .ssh
@@ -22,6 +18,9 @@ echo -e
 read USERNAME
 git config --global user.email "${MAIL}"
 git config --global user.name "${USERNAME}"
+echo -e
+echo -e "\e[33mAllright ${USERNAME} (${MAIL})!\e[0m"
+echo -e
 git clone git@gitlab.com:engravo/scripts.git
 cd scripts
 git checkout feature/ubuntu-install-script-#5jhywp
