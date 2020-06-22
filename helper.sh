@@ -21,7 +21,7 @@ echo -e
 read USERNAME
 git config --global user.email "${MAIL}"
 git config --global user.name "${USERNAME}"
-git config core.filemode false
+git config --global core.filemode false
 echo -e
 echo -e "\e[33mAlright ${USERNAME} (${MAIL})!\e[0m"
 echo -e
