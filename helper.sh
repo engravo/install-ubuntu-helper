@@ -23,5 +23,3 @@ echo -e
 echo -e "\e[33mAlright ${USERNAME} (${MAIL})!\e[0m"
 echo -e
 git clone git@gitlab.com:engravo/scripts.git
-cd scripts
-git checkout feature/ubuntu-install-script-#5jhywp
