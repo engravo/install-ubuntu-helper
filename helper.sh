@@ -1,10 +1,17 @@
 #!/bin/bash
 
+echo -e
+echo -e "\e[33mThis script expects your SSH keys to be in 'C:\Windows\Users\<User>\.ssh\'\e[0m"
+echo -e
 cd ~
 mkdir .ssh projects
 chmod 700 .ssh
 cd .ssh
-cp /mnt/c/Users/$USER/.ssh/* .
+echo -e
+echo -e "\e[33mEnter your Windows user name:\e[0m"
+echo -e
+read WIN_USER
+cp /mnt/c/Users/${WIN_USER}/.ssh/* .
 chmod 600 *
 chmod 644 *.pub known_hosts
 cd ../projects
