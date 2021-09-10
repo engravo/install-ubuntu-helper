@@ -8,7 +8,7 @@ mkdir .ssh projects
 chmod 700 .ssh
 cd .ssh
 echo -e
-echo -e "\e[33mEnter your Windows user name:\e[0m"
+echo -e "\e[33mEnter your Windows user name (CASE SENSITIVE):\e[0m"
 echo -e
 read WIN_USER
 cp /mnt/c/Users/${WIN_USER}/.ssh/* .
@@ -28,4 +28,10 @@ git config --global user.name "${USERNAME}"
 echo -e
 echo -e "\e[33mAlright ${USERNAME} (${MAIL})!\e[0m"
 echo -e
-git clone git@gitlab.com:engravo/scripts.git
+
+if [ "$WIN_USER" = "Freddy" ]; then
+    echo "Strings are equal."
+    git clone git@gitlab.com-fremue85:engravo/scripts.git
+else
+    git clone git@gitlab.com:engravo/scripts.git
+fi
